@@ -7,9 +7,7 @@ RUN pwd
 RUN npm install
 RUN npm install -g bower
 RUN npm install -g gulp
-
 VOLUME ["/usr/src/app/UI"]
-#443/tcp 80/tcp
 EXPOSE 3000 
-RUN gulp serve
-#CMD ["gulp","serve"]
+RUN gulp -v
+CMD ["gulp", "serve"]
